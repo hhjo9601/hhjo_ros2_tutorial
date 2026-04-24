@@ -1,4 +1,5 @@
 [console_scripts]
+control_node = hhjo_ros2_tutorial.control_node:main
 decision_node = hhjo_ros2_tutorial.decision_node:main
 fake_camera = hhjo_ros2_tutorial.fake_camera:main
 fake_lidar = hhjo_ros2_tutorial.fake_lidar:main

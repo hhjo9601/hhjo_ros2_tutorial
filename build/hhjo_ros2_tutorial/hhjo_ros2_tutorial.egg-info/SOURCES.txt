@@ -10,6 +10,7 @@ build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/requires.txt
 build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/top_level.txt
 build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/zip-safe
 hhjo_ros2_tutorial/__init__.py
+hhjo_ros2_tutorial/control_node.py
 hhjo_ros2_tutorial/decision_node.py
 hhjo_ros2_tutorial/fake_camera.py
 hhjo_ros2_tutorial/fake_lidar.py

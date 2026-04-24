@@ -28,6 +28,7 @@ setup(
             'fake_camera = hhjo_ros2_tutorial.fake_camera:main',
             'perception_node = hhjo_ros2_tutorial.perception_node:main',
             'decision_node = hhjo_ros2_tutorial.decision_node:main',
+            'control_node = hhjo_ros2_tutorial.control_node:main',
         ],
     },
 )

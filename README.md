@@ -99,9 +99,45 @@ fake_lidar         fake_camera
        decision_node
             ↓
  /decision/velocity_vector
+```
 
 ---
 
+### 4. Control
+
+- Subscribed to decision output
+- Converted velocity vector into ROS2 velocity command
+- Published robot command to `/cmd_vel`
+
+Topics:
+
+- Input:
+  - `/decision/velocity_vector`
+- Output:
+  - `/cmd_vel`
+
+Pipeline Structure:
+
+```text
+fake_lidar         fake_camera
+    ↓                  ↓
+  /scan        /camera/image_raw
+        \        /
+         \      /
+      perception_node
+            ↓
+/perception/obstacle_direction
+            ↓
+       decision_node
+            ↓
+ /decision/velocity_vector
+            ↓
+       control_node
+            ↓
+         /cmd_vel
+```
+
+---
 ## Acknowledgements
 
 This project was developed as part of a learning process using ROS2, with assistance from ChatGPT for problem-solving, system design, and iterative development.
