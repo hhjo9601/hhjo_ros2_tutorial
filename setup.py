@@ -26,6 +26,7 @@ setup(
         'console_scripts': [
             'fake_lidar = hhjo_ros2_tutorial.fake_lidar:main',
             'fake_camera = hhjo_ros2_tutorial.fake_camera:main',
+            'perception_node = hhjo_ros2_tutorial.perception_node:main',
         ],
     },
 )

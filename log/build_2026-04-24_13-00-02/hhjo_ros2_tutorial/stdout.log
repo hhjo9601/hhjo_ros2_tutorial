@@ -1,0 +1,29 @@
+running egg_info
+writing build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/PKG-INFO
+writing dependency_links to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/dependency_links.txt
+writing entry points to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/entry_points.txt
+writing requirements to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/requires.txt
+writing top-level names to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/top_level.txt
+reading manifest file 'build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/SOURCES.txt'
+writing manifest file 'build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/SOURCES.txt'
+running build
+running build_py
+copying hhjo_ros2_tutorial/__init__.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+copying hhjo_ros2_tutorial/fake_camera.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+copying hhjo_ros2_tutorial/perception_node.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+copying hhjo_ros2_tutorial/fake_lidar.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+running install
+running install_lib
+copying /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial/perception_node.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial
+byte-compiling /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/perception_node.py to perception_node.cpython-310.pyc
+running install_data
+copying resource/hhjo_ros2_tutorial -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/share/ament_index/resource_index/packages
+copying package.xml -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/share/hhjo_ros2_tutorial
+running install_egg_info
+removing '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial-0.0.0-py3.10.egg-info' (and everything under it)
+Copying build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial-0.0.0-py3.10.egg-info
+running install_scripts
+Installing fake_camera script to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial
+Installing fake_lidar script to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial
+Installing perception_node script to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial
+writing list of installed files to '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/install.log'

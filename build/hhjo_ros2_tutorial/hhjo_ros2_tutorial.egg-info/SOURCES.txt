@@ -12,6 +12,7 @@ build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/zip-safe
 hhjo_ros2_tutorial/__init__.py
 hhjo_ros2_tutorial/fake_camera.py
 hhjo_ros2_tutorial/fake_lidar.py
+hhjo_ros2_tutorial/perception_node.py
 resource/hhjo_ros2_tutorial
 test/test_copyright.py
 test/test_flake8.py
