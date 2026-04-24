@@ -1,0 +1,33 @@
+[0.690s] Invoking command in '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial': PYTHONPATH=/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/hhjo_ros2_tutorial build --build-base /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build install --record /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/install.log --single-version-externally-managed install_data
+[0.989s] running egg_info
+[1.007s] writing build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/PKG-INFO
+[1.008s] writing dependency_links to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/dependency_links.txt
+[1.008s] writing entry points to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/entry_points.txt
+[1.008s] writing requirements to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/requires.txt
+[1.008s] writing top-level names to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/top_level.txt
+[1.054s] reading manifest file 'build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/SOURCES.txt'
+[1.056s] writing manifest file 'build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/SOURCES.txt'
+[1.056s] running build
+[1.056s] running build_py
+[1.056s] copying hhjo_ros2_tutorial/__init__.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+[1.056s] copying hhjo_ros2_tutorial/fake_camera.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+[1.057s] copying hhjo_ros2_tutorial/decision_node.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+[1.057s] copying hhjo_ros2_tutorial/perception_node.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+[1.057s] copying hhjo_ros2_tutorial/fake_lidar.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+[1.058s] running install
+[1.062s] running install_lib
+[1.081s] copying /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial/decision_node.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial
+[1.081s] byte-compiling /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/decision_node.py to decision_node.cpython-310.pyc
+[1.082s] running install_data
+[1.082s] copying resource/hhjo_ros2_tutorial -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/share/ament_index/resource_index/packages
+[1.083s] copying package.xml -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/share/hhjo_ros2_tutorial
+[1.083s] running install_egg_info
+[1.102s] removing '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial-0.0.0-py3.10.egg-info' (and everything under it)
+[1.102s] Copying build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial-0.0.0-py3.10.egg-info
+[1.103s] running install_scripts
+[1.149s] Installing decision_node script to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial
+[1.150s] Installing fake_camera script to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial
+[1.150s] Installing fake_lidar script to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial
+[1.150s] Installing perception_node script to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial
+[1.151s] writing list of installed files to '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/install.log'
+[1.169s] Invoked command in '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial' returned '0': PYTHONPATH=/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/hhjo_ros2_tutorial build --build-base /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build install --record /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/install.log --single-version-externally-managed install_data

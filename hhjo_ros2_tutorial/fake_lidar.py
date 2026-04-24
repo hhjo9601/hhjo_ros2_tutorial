@@ -37,6 +37,10 @@ class FakeLidar(Node):
 
         msg.ranges = ranges
         self.pub.publish(msg)
+        if len(msg.ranges) > 0:
+            self.get_logger().info(
+                f'LiDAR sample: {msg.ranges[:5]}'
+        )
 
 def main(args=None):
     rclpy.init(args=args)

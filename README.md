@@ -1,4 +1,4 @@
-# ROS2 Autonomous Driving Tutorial (using Chat GPT)
+# ROS2 Autonomous Driving Tutorial
 
 This repository documents a step-by-step learning process of building an autonomous driving pipeline using ROS2, starting from fake sensors to full simulation with Gazebo and Nav2.
 
@@ -15,9 +15,12 @@ This repository documents a step-by-step learning process of building an autonom
   - `/scan`
   - `/camera/image_raw`
 
-### structure
-fake_lidar  → /scan
-fake_camera → /camera/image_raw
+## Pipeline Structure
+```text
+fake_lidar         fake_camera
+    ↓                  ↓
+  /scan        /camera/image_raw
+```
 
 #### Run
 
@@ -53,13 +56,49 @@ Topics:
 ./scripts/run_02_perception.sh
 ```
 
-### structure
-fake_lidar  → /scan
-fake_camera → /camera/image_raw
-          ↓
-perception_node
-          ↓
+## Pipeline Structure
+
+```text
+fake_lidar         fake_camera
+    ↓                  ↓
+  /scan        /camera/image_raw
+        \        /
+         \      /
+      perception_node
+            ↓
 /perception/obstacle_direction
+```
+---
+
+### 3. Decision
+
+- Subscribed to perception output
+- Converted perception result into a velocity vector
+- Used rule-based decision logic
+- Published decision result to `/decision/velocity_vector`
+
+Topics:
+
+- Input:
+  - `/perception/obstacle_direction`
+- Output:
+  - `/decision/velocity_vector`
+
+Pipeline Structure:
+
+```text
+fake_lidar         fake_camera
+    ↓                  ↓
+  /scan        /camera/image_raw
+        \        /
+         \      /
+      perception_node
+            ↓
+/perception/obstacle_direction
+            ↓
+       decision_node
+            ↓
+ /decision/velocity_vector
 
 ---
 

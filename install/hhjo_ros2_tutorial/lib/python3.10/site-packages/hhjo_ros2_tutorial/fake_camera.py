@@ -11,6 +11,8 @@ class FakeCamera(Node):
         self.publisher = self.create_publisher(Image, '/camera/image_raw', 10)
         self.timer = self.create_timer(0.1, self.publish_image)  # 10Hz
 
+        self.frame_count = 0
+
         self.get_logger().info('Fake Camera started')
 
     def publish_image(self):
@@ -35,7 +37,10 @@ class FakeCamera(Node):
         msg.data = image.tobytes()
 
         self.publisher.publish(msg)
-
+        if self.frame_count % 10 == 0:
+            self.get_logger().info(
+                f'Published fake camera image: {width}x{height}, encoding={msg.encoding}'
+            )
 
 def main(args=None):
     rclpy.init(args=args)
