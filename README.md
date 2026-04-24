@@ -25,7 +25,7 @@ For more detailed explanation, please refer to **Timeline Section**.
   - `/scan`
   - `/camera/image_raw`
 
-## Pipeline Structure
+Pipeline Structure:
 
 ```text
 fake_lidar         fake_camera
