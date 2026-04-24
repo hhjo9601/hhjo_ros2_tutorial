@@ -16,6 +16,7 @@ class PerceptionNode(Node):
 
         self.camera_red_detected = False
         self.camera_red_ratio = 0.0
+        self.camera_object_position = 'none'
 
         self.create_subscription(
             LaserScan,
@@ -47,15 +48,30 @@ class PerceptionNode(Node):
         image = np.frombuffer(msg.data, dtype=np.uint8)
         image = image.reshape((msg.height, msg.width, 3))
 
-        # Fake camera uses RGB red box: [255, 0, 0]
         red = image[:, :, 0]
         green = image[:, :, 1]
         blue = image[:, :, 2]
 
         red_mask = (red > 150) & (green < 80) & (blue < 80)
 
-        self.camera_red_ratio = float(np.sum(red_mask)) / float(msg.height * msg.width)
+        red_pixels = np.where(red_mask)
+        red_count = len(red_pixels[0])
+
+        self.camera_red_ratio = float(red_count) / float(msg.height * msg.width)
         self.camera_red_detected = self.camera_red_ratio > 0.03
+
+        if not self.camera_red_detected:
+            self.camera_object_position = 'none'
+            return
+
+        avg_x = float(np.mean(red_pixels[1]))
+
+        if avg_x < msg.width / 3:
+            self.camera_object_position = 'left'
+        elif avg_x > msg.width * 2 / 3:
+            self.camera_object_position = 'right'
+        else:
+            self.camera_object_position = 'center'
 
     def scan_callback(self, msg: LaserScan):
         left = self.get_min_range(msg, math.radians(30), math.radians(90))
@@ -71,8 +87,9 @@ class PerceptionNode(Node):
 
         self.get_logger().info(
             f'left={left:.2f}, front={front:.2f}, right={right:.2f}, '
-            f'camera_red={self.camera_red_detected}, red_ratio={self.camera_red_ratio:.3f} '
-            f'-> {fusion_result}'
+            f'camera_detected={self.camera_red_detected}, '
+            f'camera_pos={self.camera_object_position}, '
+            f'red_ratio={self.camera_red_ratio:.3f} -> {fusion_result}'
         )
 
     def get_min_range(self, msg: LaserScan, start_angle: float, end_angle: float) -> float:
@@ -112,12 +129,13 @@ class PerceptionNode(Node):
         return 'clear'
 
     def fuse_result(self, lidar_result: str) -> str:
-        if self.camera_red_detected:
-            if lidar_result == 'clear':
-                return 'camera_object_detected_slow_down'
-            return f'{lidar_result}_camera_object_detected'
+        if not self.camera_red_detected:
+            return lidar_result
 
-        return lidar_result
+        if lidar_result == 'clear':
+            return f'camera_object_{self.camera_object_position}_slow_down'
+
+        return f'{lidar_result}_camera_object_{self.camera_object_position}'
 
 
 def main(args=None):

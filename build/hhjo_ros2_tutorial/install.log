@@ -1,12 +1,14 @@
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/__init__.py
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/control_node.py
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/fake_camera.py
+/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/visualization_node.py
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/decision_node.py
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/perception_node.py
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/fake_lidar.py
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/__pycache__/__init__.cpython-310.pyc
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/__pycache__/control_node.cpython-310.pyc
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/__pycache__/fake_camera.cpython-310.pyc
+/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/__pycache__/visualization_node.cpython-310.pyc
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/__pycache__/decision_node.cpython-310.pyc
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/__pycache__/perception_node.cpython-310.pyc
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial/__pycache__/fake_lidar.cpython-310.pyc
@@ -24,3 +26,4 @@
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial/fake_camera
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial/fake_lidar
 /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial/perception_node
+/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial/visualization_node

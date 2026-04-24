@@ -15,6 +15,7 @@ hhjo_ros2_tutorial/decision_node.py
 hhjo_ros2_tutorial/fake_camera.py
 hhjo_ros2_tutorial/fake_lidar.py
 hhjo_ros2_tutorial/perception_node.py
+hhjo_ros2_tutorial/visualization_node.py
 resource/hhjo_ros2_tutorial
 test/test_copyright.py
 test/test_flake8.py

@@ -16,6 +16,7 @@ This repository documents a step-by-step learning process of building an autonom
   - `/camera/image_raw`
 
 ## Pipeline Structure
+
 ```text
 fake_lidar         fake_camera
     ↓                  ↓
@@ -56,7 +57,7 @@ Topics:
 ./scripts/run_02_perception.sh
 ```
 
-## Pipeline Structure
+Pipeline Structure:
 
 ```text
 fake_lidar         fake_camera
@@ -138,6 +139,52 @@ fake_lidar         fake_camera
 ```
 
 ---
-## Acknowledgements
+
+### 5. Control + Visualization
+
+- Subscribed to decision output
+- Converted velocity vector into ROS2 velocity command
+- Published robot command to `/cmd_vel`
+- Visualized perception, decision, and control outputs using RViz markers
+
+Topics:
+
+- Input:
+  - `/decision/velocity_vector`
+  - `/perception/obstacle_direction`
+  - `/cmd_vel`
+- Output:
+  - `/cmd_vel`
+  - `/visualization/status_marker`
+  - `/visualization/velocity_marker`
+
+Pipeline Structure:
+
+```text
+fake_lidar         fake_camera
+    ↓                  ↓
+  /scan        /camera/image_raw
+        \        /
+         \      /
+      perception_node
+            ↓
+/perception/obstacle_direction
+            ↓
+       decision_node
+            ↓
+ /decision/velocity_vector
+            ↓
+       control_node
+            ↓
+         /cmd_vel
+            ↓
+   visualization_node
+            ↓
+/visualization/status_marker
+/visualization/velocity_marker
+```
+
+---
+### Acknowledgements
 
 This project was developed as part of a learning process using ROS2, with assistance from ChatGPT for problem-solving, system design, and iterative development.

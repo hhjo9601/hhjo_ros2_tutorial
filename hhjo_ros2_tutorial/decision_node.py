@@ -1,5 +1,3 @@
-import math
-
 import rclpy
 from rclpy.node import Node
 
@@ -30,7 +28,6 @@ class DecisionNode(Node):
         perception_result = msg.data
 
         vector = self.make_decision(perception_result)
-
         self.decision_pub.publish(vector)
 
         self.get_logger().info(
@@ -41,65 +38,86 @@ class DecisionNode(Node):
     def make_decision(self, perception_result: str) -> Vector3:
         vector = Vector3()
 
-        # x: linear speed
-        # z: angular direction
-        # z > 0: turn left
-        # z < 0: turn right
+        # Camera position priority
+        if 'camera_object_left' in perception_result:
+            vector.x = 0.05
+            vector.z = 2.0
+            return vector
 
+        if 'camera_object_right' in perception_result:
+            vector.x = 0.05
+            vector.z = -2.0
+            return vector
+
+        if 'camera_object_center' in perception_result:
+            vector.x = 0.0
+            vector.z = 0.0
+            return vector
+
+        # LiDAR fallback
         if perception_result == 'clear':
             vector.x = 0.5
-            vector.y = 0.0
             vector.z = 0.0
 
-        elif perception_result == 'front_blocked_turn_left':
+        elif 'front_blocked_turn_left' in perception_result:
             vector.x = 0.2
-            vector.y = 0.0
-            vector.z = 0.8
+            vector.z = 1.2
 
-        elif perception_result == 'front_blocked_turn_right':
+        elif 'front_blocked_turn_right' in perception_result:
             vector.x = 0.2
-            vector.y = 0.0
+            vector.z = -1.2
+
+        elif 'left_blocked' in perception_result:
+            vector.x = 0.3
             vector.z = -0.8
 
-        elif perception_result == 'left_blocked':
+        elif 'right_blocked' in perception_result:
             vector.x = 0.3
-            vector.y = 0.0
-            vector.z = -0.4
-
-        elif perception_result == 'right_blocked':
-            vector.x = 0.3
-            vector.y = 0.0
-            vector.z = 0.4
-
-        elif perception_result == 'left_right_blocked':
-            vector.x = 0.0
-            vector.y = 0.0
             vector.z = 0.8
 
-        elif perception_result == 'camera_object_detected_slow_down':
-            vector.x = 0.2
-            vector.y = 0.0
-            vector.z = 0.0
-
-        elif 'camera_object_detected' in perception_result:
-            vector.x = 0.1
-            vector.y = 0.0
-
-            if 'turn_left' in perception_result:
-                vector.z = 0.7
-            elif 'turn_right' in perception_result:
-                vector.z = -0.7
-            elif 'left_blocked' in perception_result:
-                vector.z = -0.4
-            elif 'right_blocked' in perception_result:
-                vector.z = 0.4
-            else:
-                vector.z = 0.0
+        elif 'left_right_blocked' in perception_result:
+            vector.x = 0.0
+            vector.z = 1.5
 
         else:
-            # Unknown state: stop for safety
             vector.x = 0.0
-            vector.y = 0.0
+            vector.z = 0.0
+
+        return vector
+
+    def handle_camera_only(self, result: str) -> Vector3:
+        vector = Vector3()
+
+        vector.x = 0.2
+
+        if 'left' in result:
+            vector.z = 1.2
+        elif 'right' in result:
+            vector.z = -1.2
+        elif 'center' in result:
+            vector.x = 0.05
+            vector.z = 0.0
+        else:
+            vector.z = 0.0
+
+        return vector
+
+    def handle_lidar_camera_fusion(self, result: str) -> Vector3:
+        vector = Vector3()
+
+        vector.x = 0.1
+
+        if 'front_blocked_turn_left' in result:
+            vector.z = 0.7
+        elif 'front_blocked_turn_right' in result:
+            vector.z = -0.7
+        elif 'left_blocked' in result:
+            vector.z = -0.4
+        elif 'right_blocked' in result:
+            vector.z = 0.4
+        elif 'left_right_blocked' in result:
+            vector.z = 0.8
+        else:
             vector.z = 0.0
 
         return vector
