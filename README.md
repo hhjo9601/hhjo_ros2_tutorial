@@ -2,6 +2,16 @@
 
 This repository documents a step-by-step learning process of building an autonomous driving pipeline using ROS2, starting from fake sensors to full simulation with Gazebo and Nav2.
 
+## Quick start
+
+If you want to run the complete pipeline from start to finish:
+
+```bash
+./scripts/run_05_visualization.sh
+```
+
+For more detailed explanation, please refer to **Timeline Section**.
+
 ---
 
 ## Timeline
