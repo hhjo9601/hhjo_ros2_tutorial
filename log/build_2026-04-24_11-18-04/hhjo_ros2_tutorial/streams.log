@@ -1,0 +1,27 @@
+[0.715s] Invoking command in '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial': PYTHONPATH=/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/hhjo_ros2_tutorial build --build-base /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build install --record /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/install.log --single-version-externally-managed install_data
+[1.002s] running egg_info
+[1.024s] writing build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/PKG-INFO
+[1.024s] writing dependency_links to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/dependency_links.txt
+[1.025s] writing entry points to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/entry_points.txt
+[1.025s] writing requirements to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/requires.txt
+[1.025s] writing top-level names to build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/top_level.txt
+[1.074s] reading manifest file 'build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/SOURCES.txt'
+[1.075s] writing manifest file 'build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info/SOURCES.txt'
+[1.075s] running build
+[1.076s] running build_py
+[1.076s] copying hhjo_ros2_tutorial/__init__.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+[1.076s] copying hhjo_ros2_tutorial/fake_camera.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+[1.076s] copying hhjo_ros2_tutorial/fake_lidar.py -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build/lib/hhjo_ros2_tutorial
+[1.076s] running install
+[1.081s] running install_lib
+[1.104s] running install_data
+[1.104s] copying resource/hhjo_ros2_tutorial -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/share/ament_index/resource_index/packages
+[1.104s] copying package.xml -> /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/share/hhjo_ros2_tutorial
+[1.104s] running install_egg_info
+[1.130s] removing '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial-0.0.0-py3.10.egg-info' (and everything under it)
+[1.131s] Copying build/hhjo_ros2_tutorial/hhjo_ros2_tutorial.egg-info to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages/hhjo_ros2_tutorial-0.0.0-py3.10.egg-info
+[1.131s] running install_scripts
+[1.177s] Installing fake_camera script to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial
+[1.177s] Installing fake_lidar script to /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/hhjo_ros2_tutorial
+[1.178s] writing list of installed files to '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/install.log'
+[1.199s] Invoked command in '/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial' returned '0': PYTHONPATH=/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/install/hhjo_ros2_tutorial/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base build/hhjo_ros2_tutorial build --build-base /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/build install --record /home/vertin/ros_hhjo/exp_ws/src/hhjo_ros2_tutorial/build/hhjo_ros2_tutorial/install.log --single-version-externally-managed install_data
